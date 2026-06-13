@@ -26,8 +26,14 @@ export default async function PostDetailPage({
         <div className="max-w-xl mx-auto mt-16 p-8 bg-white rounded-3xl border border-slate-100 shadow-xl/50">
             <Link href="/post-list" className="inline-block text-xs font-semibold text-indigo-600 bg-indigo-50 px-3 py-1.5 rounded-lg mb-6 
             hover:bg-indigo-100 transition-colors">
-            전체 목록으로 돌아가기      
+            전체 목록으로 돌아가기
             </Link>
+
+            <Link href={`/post/${post.id}/edit`} className="inline-block text-xs font-semibold text-indigo-600 bg-indigo-50 px-3 py-1.5 rounded-lg mb-6 
+            hover:bg-indigo-100 transition-colors">
+            ✏️ 이 글 수정하기
+            </Link>
+
 
             <form action={deleteActionWithId}>
                 <button type="submit" className="text-xs font-bold text-rose-600 bg-rose-50 px-3 py-1.5 rounded-lg hover:bg-rose-100 action:scale-95 transition-all">
