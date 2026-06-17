@@ -21,5 +21,8 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         authorized({ auth }) {
             return !!auth;
         }
+    },
+    pages: {
+        signIn: "/login",
     }
 });
